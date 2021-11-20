@@ -1,4 +1,4 @@
-package StringLC5;
+package String_LC5;
 
 import static java.lang.Character.isLetterOrDigit;
 

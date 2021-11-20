@@ -1,4 +1,4 @@
-package StringLC4;
+package String_LC4;
 
 import java.util.Arrays;
 

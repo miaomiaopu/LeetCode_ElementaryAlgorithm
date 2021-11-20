@@ -1,4 +1,4 @@
-package StringLC2;
+package String_LC2;
 
 public class Solution {
     int calculate(int x) {
