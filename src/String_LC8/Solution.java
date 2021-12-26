@@ -1,16 +1,26 @@
 package String_LC8;
 
 public class Solution {
-    public String longestCommonPrefix(String[] strs) {
-        if (strs.length == 0)
-            return "";
-        String res = strs[0];
-        int i = 1;
-        while (i < strs.length) {
-            while (strs[i].indexOf(res) != 0)
-                res = res.substring(0, res.length() - 1);
-            i++;
+    public String countAndSay(int n) {
+        if (n == 1) {
+            return "1";
         }
-        return res;
+        String s = countAndSay(n - 1);
+        StringBuffer result = new StringBuffer();
+        char local = s.charAt(0);
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == local) {
+                count++;
+            } else {
+                result.append(count);
+                result.append(local);
+                count = 1;
+                local = s.charAt(i);
+            }
+        }
+        result.append(count);
+        result.append(local);
+        return result.toString();
     }
 }
